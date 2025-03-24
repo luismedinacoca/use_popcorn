@@ -27,17 +27,15 @@ export default function App() {
       </Navbar>
 
       <Main>
-        {/* <ListBox>
-          <MovieList movies={movies} />
-        </ListBox> */}
-        <Box>
-          <MovieList movies={movies} />
-        </Box>
-        {/* <WatchedBox /> */}
-        <Box>
-          <WatchedSummary watched={watched} />
-          <WatchedMoviesList watched={watched} />
-        </Box>
+        <Box element={<MovieList movies={movies} />} />
+        <Box
+          element={
+            <>
+              <WatchedSummary watched={watched} />
+              <WatchedMoviesList watched={watched} />
+            </>
+          }
+        />
       </Main>
     </>
   );
