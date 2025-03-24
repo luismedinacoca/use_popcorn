@@ -16,6 +16,8 @@ import Box from "./components/Box/Box";
 import WatchedSummary from "./components/WatchedSummary/WatchedSummary";
 import WatchedMoviesList from "./components/WatchedMoviesList/WatchedMoviesList";
 
+//import StarRating from "./components/StarRating/StarRating";
+
 export default function App() {
   const [movies, setMovies] = useState(tempMovieData);
   const [watched, setWatched] = useState(tempWatchedData);
@@ -27,18 +29,17 @@ export default function App() {
       </Navbar>
 
       <Main>
-        {/* <ListBox>
-          <MovieList movies={movies} />
-        </ListBox> */}
         <Box>
           <MovieList movies={movies} />
         </Box>
-        {/* <WatchedBox /> */}
+
         <Box>
           <WatchedSummary watched={watched} />
           <WatchedMoviesList watched={watched} />
         </Box>
       </Main>
+
+      
     </>
   );
 }
