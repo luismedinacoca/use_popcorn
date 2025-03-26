@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Star = ({ onRate, full, onHoverIn, onHoverOut, color, size }) => {
   const starStyle = {
     width: `${size}px`,
@@ -45,3 +47,12 @@ const Star = ({ onRate, full, onHoverIn, onHoverOut, color, size }) => {
 };
 
 export default Star;
+
+Star.propTypes = {
+  onRate: PropTypes.func,
+  full: PropTypes.bool,
+  onHoverIn: PropTypes.func,
+  onHoverOut: PropTypes.func,
+  color: PropTypes.string,
+  size: PropTypes.number,
+};
